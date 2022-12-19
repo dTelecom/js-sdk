@@ -11,9 +11,7 @@
   "scripts": {
     "build": "tsc",
     "bundle": "webpack",
-    "dev": "tsc -w",
-    "prepare": "npm run build && npm run bundle",
-    "web-dev": "webpack serve --mode development --open --config ./webpack.dev.config.js --hot --inline --port 8081 --host localhost"
+    "dev": "tsc -w"
   },
   "author": "pion",
   "license": "MIT",

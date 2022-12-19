@@ -178,7 +178,7 @@ export class LocalStream extends MediaStream {
         ...VideoConstraints[constraints.resolution].resolution,
       };
     }
-    return constraints.video as unknown as MediaTrackConstraints;
+    return constraints.video as MediaTrackConstraints;
   }
 
   private getTrack(kind: 'audio' | 'video') {

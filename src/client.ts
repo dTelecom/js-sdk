@@ -221,7 +221,7 @@ export default class Client {
     } catch (err) {
       /* tslint:disable-next-line:no-console */
       console.error(err);
-      if (this.onerrnegotiate) this.onerrnegotiate(Role.sub, err as Error, description, answer);
+      if (this.onerrnegotiate) this.onerrnegotiate(Role.sub, err, description, answer);
     }
   }
 
@@ -244,7 +244,7 @@ export default class Client {
     } catch (err) {
       /* tslint:disable-next-line:no-console */
       console.error(err);
-      if (this.onerrnegotiate) this.onerrnegotiate(Role.pub, err as Error, offer, answer);
+      if (this.onerrnegotiate) this.onerrnegotiate(Role.pub, err, offer, answer);
     }
   }
 
