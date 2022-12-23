@@ -1,7 +1,7 @@
 {
-  "name": "ion-sdk-js",
+  "name": "dtelecom-js-sdk",
   "version": "1.8.1",
-  "description": "A js sdk for ion-sfu or ion",
+  "description": "A js sdk for dtelecom",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "files": [
@@ -13,7 +13,7 @@
     "bundle": "webpack",
     "dev": "tsc -w"
   },
-  "author": "pion",
+  "author": "dtelecom",
   "license": "MIT",
   "devDependencies": {
     "@babel/core": "7.12.10",
@@ -44,10 +44,7 @@
     "webpack-cli": "^4.8.0"
   },
   "keywords": [
-    "pion",
-    "sfu",
     "webrtc",
-    "ion",
     "js"
   ]
 }

@@ -81,8 +81,8 @@ class IonSFUJSONRPCSignal implements Signal {
     );
   }
 
-  async join(sid: string, uid: string, name: string, offer: RTCSessionDescriptionInit) {
-    return this.call<RTCSessionDescriptionInit>('join', { sid, uid, name, offer });
+  async join(token: string, signature: string, offer: RTCSessionDescriptionInit) {
+    return this.call<RTCSessionDescriptionInit>('join', { token, signature, offer });
   }
 
   trickle(trickle: Trickle) {

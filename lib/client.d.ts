@@ -42,7 +42,7 @@ export default class Client {
     onerrnegotiate?: (role: Role, err: Error, offer?: RTCSessionDescriptionInit, answer?: RTCSessionDescriptionInit) => void;
     onactivelayer?: (al: ActiveLayer) => void;
     constructor(signal: Signal, config?: Configuration);
-    join(sid: string, uid: string, name: string): Promise<void>;
+    join(token: string, signature: string): Promise<void>;
     leave(): void;
     getPubStats(selector?: MediaStreamTrack): Promise<RTCStatsReport>;
     getSubStats(selector?: MediaStreamTrack): Promise<RTCStatsReport>;

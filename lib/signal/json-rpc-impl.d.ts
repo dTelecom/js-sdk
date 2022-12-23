@@ -12,7 +12,7 @@ declare class IonSFUJSONRPCSignal implements Signal {
     on_notify<T>(method: string, cb: (params: T) => void): void;
     call<T>(method: string, params: any): Promise<T>;
     notify(method: string, params: any): void;
-    join(sid: string, uid: string, name: string, offer: RTCSessionDescriptionInit): Promise<RTCSessionDescriptionInit>;
+    join(token: string, signature: string, offer: RTCSessionDescriptionInit): Promise<RTCSessionDescriptionInit>;
     trickle(trickle: Trickle): void;
     offer(offer: RTCSessionDescriptionInit): Promise<RTCSessionDescriptionInit>;
     answer(answer: RTCSessionDescriptionInit): void;

@@ -99,7 +99,7 @@ export default class Client {
     signal.ontrickle = this.trickle.bind(this);
   }
 
-  async join(sid: string, uid: string, name: string) {
+  async join(token: string, signature: string) {
     this.transports = {
       [Role.pub]: new Transport(Role.pub, this.signal, this.config),
       [Role.sub]: new Transport(Role.sub, this.signal, this.config),
@@ -140,7 +140,7 @@ export default class Client {
 
     const offer = await this.transports[Role.pub].pc.createOffer();
     await this.transports[Role.pub].pc.setLocalDescription(offer);
-    const answer = await this.signal.join(sid, uid, name, offer);
+    const answer = await this.signal.join(token, signature, offer);
     await this.transports[Role.pub].pc.setRemoteDescription(answer);
     this.transports[Role.pub].candidates.forEach((c) => this.transports![Role.pub].pc.addIceCandidate(c));
     this.transports[Role.pub].pc.onnegotiationneeded = this.onNegotiationNeeded.bind(this);
